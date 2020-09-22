@@ -13,7 +13,7 @@ var DB *gorm.DB
 
 // InitSQLite :  初始化数据库
 func InitSQLite() (err error) {
-	dsn := util.GetCurrentDirectory() + "/conf/subscriber.db"
+	dsn := util.GetCurrentDirectory() + "/conf/data.db"
 	DB, err = gorm.Open("sqlite3", dsn)
 	if err != nil {
 		log.Println(err)
