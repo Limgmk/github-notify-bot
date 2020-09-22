@@ -1,0 +1,5 @@
+bot-token:
+bind-address: "0.0.0.0:8080"
+secret: "secret"
+cert-path: ""
+key-path: ""
