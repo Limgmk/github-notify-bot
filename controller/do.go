@@ -53,11 +53,15 @@ func addCommand(update *tgbotapi.Update) {
 	chatId := message.Chat.ID
 	replyText := ""
 
-	repo := new(model.Repository)
-	repo.FullName = message.CommandArguments()
-	model.CreateRepo(repo)
+	if message.CommandArguments() == "" {
+		replyText = "请用仓库全名作为参数"
+	} else {
+		repo := new(model.Repository)
+		repo.FullName = message.CommandArguments()
+		model.CreateRepo(repo)
 
-	replyText = "添加仓库成功"
+		replyText = "添加仓库成功"
+	}
 
 	sendText(chatId, replyText)
 }
