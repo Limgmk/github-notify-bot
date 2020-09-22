@@ -36,7 +36,7 @@ func FindRepoByFullName(fullName string) (r *Repository, err error) {
 }
 
 func FindAllRepos() (rList []*Repository, err error) {
-	if err = DB.First(&rList).Error; err != nil {
+	if err = DB.Find(&rList).Error; err != nil {
 		return nil, err
 	}
 	return rList, err
