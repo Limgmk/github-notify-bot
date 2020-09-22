@@ -84,6 +84,10 @@ func AuthTelegramUser(c *gin.Context)  {
 			startCommand(update)
 		case "auth":
 			authCommand(update)
+		case "add":
+			addCommand(update)
+		case "del":
+			delCommand(update)
 		case "sub":
 			sub(update)
 		case "unsub":
