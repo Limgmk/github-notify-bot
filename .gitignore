@@ -12,6 +12,7 @@
 
 # build create exec file
 main
+github-notify-bot
 
 # Test binary, build with `go test -c`
 *.test
