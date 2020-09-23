@@ -189,7 +189,7 @@ func allCommand(update *tgbotapi.Update) {
 	if rList != nil && len(rList) == 0 {
 		replyText = "还没有任何订阅"
 	} else {
-		replyText = fmt.Sprintf("订阅列表: \n")
+		replyText = fmt.Sprintf("可订阅仓库: \n")
 		for _, r := range rList {
 			replyText = fmt.Sprintf("%v\n[%v](https://github.com/%v)", replyText, r.FullName, r.FullName)
 		}
